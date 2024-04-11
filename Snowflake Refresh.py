@@ -3,6 +3,14 @@ pip install snowflake-connector-python
 
 # COMMAND ----------
 
+# Create widgets for the variables
+dbutils.widgets.text("warehouse", "")
+dbutils.widgets.text("database", "")
+dbutils.widgets.text("schema", "")
+dbutils.widgets.text("table", "")
+
+# COMMAND ----------
+
 import snowflake.connector
 
 warehouse = dbutils.widgets.get("warehouse")

@@ -1,0 +1,15 @@
+resources:
+  jobs:
+    Example_Snowflake_Refresh_Task:
+      name: Example Snowflake Refresh Task
+      tasks:
+        - task_key: Refresh_Snowflake
+          notebook_task:
+            notebook_path: /Users/ron.joy@databricks.com/Sandbox/Parameterized Snowflake
+              Refresh
+            base_parameters:
+              warehouse: my_warehouse
+              database: my_databse
+              table: my_table
+              schema: ICEBERG
+            source: WORKSPACE
